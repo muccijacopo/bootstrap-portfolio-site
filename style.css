@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+
+/* ANIMATION */
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* GLOBAL */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #dadada;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  position: relative;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-weight: 700;
+  color: #222;
+}
+
+p {
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+}
+
+.div-line {
+  display: flex;
+}
+
+hr {
+  width: 100%;
+  position: relative;
+  margin: 1rem;
+  border: 1px solid #222;
+}
+
+.div-line .fas {
+  position: relative;
+  top: 8px;
+  color: #222;
+}
+
+.section-title {
+  letter-spacing: 5px;
+  font-size: 3rem;
+}
+
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+
+.content-center {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+}
+
+/* NAVBAR */
+
+.navbar {
+  background: #001d49;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  padding: 0 1rem;
+  z-index: 1;
+}
+
+.navbar-brand {
+  font-size: 2.2rem;
+  margin-left: 10px;
+  color: #eeeeee;
+}
+
+.navbar-nav li {
+  padding: 1rem 0.5rem;
+  margin: 0 !important;
+}
+
+.navbar .navbar-nav li a {
+  color: white !important;
+}
+
+.navbar .navbar-nav li:hover {
+  background: #006af0;
+}
+
+/* HOME */
+
+#home {
+  height: 100%;
+  background-color: #006af0;
+  color: white;
+  position: relative;
+}
+
+#home img {
+  max-width: 80px;
+}
+
+#home h1 {
+  color: white;
+  opacity: 0;
+  font-size: 5rem;
+  line-height: 1.3;
+  position: relative;
+  animation: fade 2s forwards;
+}
+
+#home p {
+  color: white;
+  opacity: 0;
+  font-size: 2rem;
+  animation: fade 1s linear 1s forwards;
+}
+
+#home .arrow-down {
+  opacity: 0;
+  animation: fade 1s linear 2s forwards;
+  bottom: 5rem;
+  left: 50%;
+  transform: translate(-50%);
+  position: absolute;
+  border: none;
+  color: #fff;
+}
+
+/* About section */
+
+#about {
+  background: #eeeeee;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 812px;
+  padding: 3rem 1rem;
+  margin: 0 auto;
+}
+
+#about h1 {
+  color: #222222;
+}
+
+#about hr {
+  border: 1px solid #222222;
+}
+
+#about .div-line .fas {
+  color: #222222;
+}
+
+#about .about-text {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: rgba(173, 173, 173, 0.4);
+  border-radius: 10px;
+  box-shadow: 2px 3px 20px -3px rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  text-align: left;
+  transition: all 0.5s;
+}
+
+#about .about-text a {
+  text-decoration: none;
+  color: #222;
+}
+
+/* Portfolio section */
+
+#portfolio {
+  background-color: #dadada;
+  padding: 3rem 0.5rem;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.arrow-up {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+#social {
+  background: #cfcfcf;
+  padding: 3rem 0;
+}
+
+#social h1 {
+  font-size: 1.1rem;
+}
+
+#social .social-icons {
+  padding: 2rem;
+}
+
+#social .social-icons img {
+  display: inline-block;
+  width: 50px;
+  height: auto;
+}
+
+#social .social-icons a:hover {
+  text-decoration: none;
+}
+
+#social .social-icons img:hover {
+  opacity: 0.8;
+}
+
+#contacts {
+  background: #006af0;
+  padding: 3rem 0;
+}
+#contacts h1 {
+  color: white;
+}
+
+@media (max-width: 500px) {
+  .arrow-up {
+    position: relative;
+    width: 90%;
+    height: auto;
+    bottom: 0.1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 30px;
+  }
+  .arrow-up::before {
+    content: "Torna su";
+    margin-right: 0.6rem;
+  }
+
+  /* .section-title {
+    font-size: 2rem;
+  } */
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  #social h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #about .about-text {
+    padding: 3rem;
+  }
+
+  hr {
+    width: 80%;
+  }
+
+  #social h1 {
+    font-size: 3rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  hr {
+    /* width: 60%; */
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* --------------------- */
+/* CV */
+
+#CV img {
+  width: 100%;
+  height: auto;
+}
+
+#CV button {
+  position: absolute;
+  border: none;
+  border-radius: 2;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  right: 1rem;
+  left: auto;
+  top: 1rem;
+  cursor: pointer;
+}
+
+#CV button:hover {
+  background-color: #0050c7;
+}
